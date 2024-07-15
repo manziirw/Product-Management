@@ -1,10 +1,12 @@
-package com.Product.ProductManagement.Repository;
+package com.Product.ProductManagement.Repository.Jpa;
 
 import com.Product.ProductManagement.dto.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
+    Optional<Category> findByName(String name);
 }
-

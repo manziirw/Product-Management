@@ -1,4 +1,4 @@
-package com.Product.ProductManagement.Repository;
+package com.Product.ProductManagement.Repository.Jpa;
 
 import com.Product.ProductManagement.dto.Product;
 import org.springframework.data.domain.Page;
