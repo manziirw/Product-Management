@@ -13,10 +13,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ProductService {
+
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
     private final BinaryTree binaryTree;
@@ -81,5 +83,16 @@ public class ProductService {
                 .orElseThrow(() -> new IllegalArgumentException("Category with id " + categoryId + " not found"));
 
         return binaryTree.searchProduct(category);
+    }
+    public List<Product> findByNameContaining(String name) {
+        return productRepository.findByNameContaining(name);
+    }
+
+    public List<Product> findByCategoryId(Long categoryId) {
+        return productRepository.findByCategoryId(categoryId);
+    }
+
+    public Page<Product> findByPriceGreaterThan(double price, Pageable pageable) {
+        return productRepository.findByPriceGreaterThan(price, pageable);
     }
 }
