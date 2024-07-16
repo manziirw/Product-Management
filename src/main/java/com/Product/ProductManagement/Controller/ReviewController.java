@@ -1,6 +1,6 @@
 package com.Product.ProductManagement.Controller;
 
-import com.Product.ProductManagement.dto.ApiResponse;
+import com.Product.ProductManagement.utils.ApiResponse;
 import com.Product.ProductManagement.dto.Review;
 import com.Product.ProductManagement.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -22,5 +22,5 @@ import java.util.List;
             return categoryRepository.findAll();
         }
     }
-
+// i can add other methods here CRUD of categories.
 

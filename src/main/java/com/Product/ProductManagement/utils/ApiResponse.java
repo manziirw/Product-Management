@@ -1,4 +1,4 @@
-package com.Product.ProductManagement.dto;
+package com.Product.ProductManagement.utils;
 
 
 public class ApiResponse<T> {

@@ -1,14 +1,11 @@
 package com.Product.ProductManagement.Controller;
 
-import com.Product.ProductManagement.dto.ApiResponse;
+import com.Product.ProductManagement.utils.ApiResponse;
 import com.Product.ProductManagement.dto.Product;
 import com.Product.ProductManagement.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -72,11 +69,6 @@ public class ProductController {
         ApiResponse<Product> response = new ApiResponse<>(true, "Product found", product);
         return ResponseEntity.ok(response);
     }
-//    @GetMapping("/search")
-//    public List<Product> findByNameContaining(@RequestParam String name) {
-//        return productService.findByNameContaining(name);
-//    }
-
     @GetMapping("/category/{categoryId}")
     public List<Product> findByCategoryId(@PathVariable Long categoryId) {
         return productService.findByCategoryId(categoryId);
