@@ -99,3 +99,6 @@ Welcome to the Product Management System project, a comprehensive Spring Boot ap
 •	LoggingInterceptor: Monitors HTTP requests and logs details at various stages for enhanced observability and debugging.
 
 This project aims to provide a solid foundation for product management systems, showcasing best practices in Spring Boot development, and demonstrating effective use of various Spring and Java technologies.
+
+
+**Loom Video**:https://www.loom.com/share/e1d774ab62034cc2915014eaa75a8df3?sid=609319b1-c7b1-4691-933d-ec14c5e277f6
